@@ -3,9 +3,12 @@ Tests for LLMEnsemble in openevolve.llm.ensemble
 """
 
 import unittest
+from dotenv import load_dotenv
 from openevolve.llm.ensemble import LLMEnsemble
 from openevolve.config import LLMModelConfig
 
+# Load API key from .env file
+load_dotenv()
 
 class TestLLMEnsemble(unittest.TestCase):
     def test_weighted_sampling(self):
